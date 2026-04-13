@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>SILKROAD AIM ASSIST</title>
+    <style>
+        /* تأثير الدخول المتلاشي للفحة كاملة */
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            animation: fadeInPage 1.5s ease-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* عنوان بداية الصفحة */
+        .main-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .main-header h1 {
+            font-size: 35px;
+            letter-spacing: 2px;
+            font-weight: 200;
+            margin: 0;
+            border-bottom: 1px solid #222;
+            padding-bottom: 20px;
+            display: inline-block;
+        }
+
+        .section-title {
+            color: #ffffff;
+            border-right: 4px solid #ffffff;
+            padding-right: 15px;
+            margin: 60px 0 25px;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #1a1a1a;
+            transition: all 0.4s ease;
+            cursor: zoom-in; /* شكل الماوس عدسة تكبير */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.02);
+            border-color: #ffffff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+
+        /* تصميم نافذة تكبير الصور (Lightbox) */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        /* زر الديسكورد الفخم */
+        .discord-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 2px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .discord-btn:hover {
+            background: #ffffff;
+            color: #000;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        footer {
+            margin-top: 120px;
+            padding: 50px;
+            border-top: 1px solid #111;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 18px;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+        }
+
+        .footer-subtext {
+            font-size: 12px;
+            color: #555;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- عنوان بداية الصفحة -->
+        <div class="main-header">
+            <h1>اعدادات اللعاب SILKROAD AIM ASSIST</h1>
+        </div>
+
+        <!-- قسم OVERWATCH -->
+        <div class="section-title">OVERWATCH SET</div>
+        <div class="gallery">
+            <img src="O1.PNG"> <img src="O2.PNG"> <img src="O3.PNG"> <img src="O4.PNG">
+            <img src="O5.PNG"> <img src="O6.PNG"> <img src="O7.PNG"> <img src="O8.PNG">
+        </div>
+
+        <!-- قسم MW2019 -->
+        <div class="section-title">MW2019 SET</div>
+        <div class="gallery">
+            <img src="MW191.png"> <img src="MW192.png"> <img src="MW193.png"> 
+            <img src="MW194.png"> <img src="MW195.png"> <img src="MW196.png"> <img src="MW197.png">
+        </div>
+
+        <!-- قسم MW3 -->
+        <div class="section-title">MW3 SET</div>
+        <div class="gallery">
+            <img src="MW31.png"> <img src="MW32.png"> <img src="MW33.png">
+        </div>
+
+        <!-- قسم BO7 BO6 -->
+        <div class="section-title">BO7 & BO6 SET</div>
+        <div class="gallery">
+            <img src="bo71.png"> <img src="bo72.png"> <img src="bo73.png">
+        </div>
+
+        <!-- قسم CM-COMBAT MASTER -->
+        <div class="section-title">CM-COMBAT MASTER SET</div>
+        <div class="gallery">
+            <img src="cm1.png">
+        </div>
+
+        <!-- التذييل -->
+        <footer>
+            <div class="footer-text">SILKROAD STORE</div>
+            <div class="footer-subtext">By ABOROKA</div>
+            <br>
+            <a href="https://discord.gg/FwuHRBnvPR" target="_blank" class="discord-btn">JOIN OUR DISCORD</a>
+        </footer>
+
+    </div>
+
+    <!-- نافذة تكبير الصور -->
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        // كود تشغيل نافذة التكبير
+        const images = document.querySelectorAll('.gallery img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        images.forEach(img => {
+            img.onclick = () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            };
+        });
+    </script>
+
+</body>
+</html>
